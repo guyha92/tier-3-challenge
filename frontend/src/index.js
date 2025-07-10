@@ -55,6 +55,7 @@ function App() {
           <tr style={{background: '#e3e8ee'}}>
             <th style={{padding: 8, textAlign: 'left'}}>Country</th>
             <th style={{padding: 8, textAlign: 'right'}}>Sales ($)</th>
+            <th style={{padding: 8, textAlign: 'right'}}># of Transactions</th>
 
           </tr>
         </thead>
@@ -63,6 +64,9 @@ function App() {
             <tr key={row.country}>
               <td style={{padding: 8}}>{row.country}</td>
               <td style={{padding: 8, textAlign: 'right'}}>{row.sales.toLocaleString()}</td>
+              <td style={{padding: 8, textAlign: 'right'}}>
+              {row.numberOfTransactions ? row.numberOfTransactions.toLocaleString() : 0}
+            </td>
 
             </tr>
           ))}

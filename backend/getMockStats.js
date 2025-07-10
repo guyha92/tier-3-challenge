@@ -2,7 +2,7 @@ const { isVisitorsKpiEnabled } = require('./feature-flags');
 
 const createBaseCountriesList = (countries) => {
   return countries.map(country => ({
-    countryName: country,
+    country : country,
     sales: 0
   }));
 }
